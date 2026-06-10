@@ -268,7 +268,8 @@ body:has(a:hover) #cur-r,body:has(button:hover) #cur-r{width:52px;height:52px;bo
 .gcta{display:flex;justify-content:center;margin-top:3rem}
 .gcta a{display:inline-flex;align-items:center;gap:14px;padding:1rem 2rem;border:1px solid var(--bd3);border-radius:2px;text-decoration:none;color:var(--blue-bright);font-family:'Barlow Condensed',sans-serif;font-size:.95rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;transition:background .25s,color .25s,border-color .25s}
 .gcta a:hover{background:var(--blue-glow);color:#fff;border-color:var(--blue-glow)}
-@media (max-width:768px){.gg{grid-template-columns:repeat(2,1fr)}}
+.fbembed{display:flex;justify-content:center;margin-top:4rem;padding:1rem;border:1px solid var(--bd2);border-radius:12px;background:linear-gradient(135deg,rgba(13,21,48,0.5),rgba(8,13,30,0.5));backdrop-filter:blur(8px)}
+@media (max-width:768px){.gg{grid-template-columns:repeat(2,1fr)} .fbembed iframe{height:600px}}
 
 /* CONTACT */
 .ct-s{padding:8rem 0;background:linear-gradient(180deg,var(--c0) 0%,var(--c1) 100%)}
@@ -893,24 +894,28 @@ footer{background:var(--c0);border-top:1px solid var(--bd);padding:3rem 0}
 </section>
 
 <!-- RECENT WORK / GALLERY
-     Add 6 photos from @lds_transportation (Instagram) to /img/ in this repo and
-     replace the <div class="gi-ph">...</div> placeholders below with:
-       <img src="/img/gallery-1.jpg" alt="Harley pickup on Long Island" loading="lazy">
-     Optimal source size: ~1200x900 jpg, ~150KB each. -->
+     Embeds the live LDS Transportation Facebook Page Plugin (timeline view).
+     Auto-updates as Josh posts new loads. To stop using the FB embed and
+     switch to static photos, replace the .fbembed div with an image grid. -->
 <section class="gal-s" id="gallery"><div class="logo-bg-left" style="top:40%;left:-40px;width:520px;height:520px;opacity:0.08"></div>
   <div class="sw">
     <span class="se">Recent Loads</span>
     <h2 class="st">FROM THE TRAILER</h2>
-    <p class="ssub" style="max-width:640px;color:var(--silver);margin-top:1.25rem">Every load gets the same enclosed treatment — Harleys, exotics, classics. Follow along for the latest pickups and deliveries.</p>
-    <div class="gg">
-      <a href="https://www.instagram.com/lds_transportation/" target="_blank" rel="noopener" class="gi"><div class="gi-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Photo 1</span></div></a>
-      <a href="https://www.instagram.com/lds_transportation/" target="_blank" rel="noopener" class="gi"><div class="gi-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Photo 2</span></div></a>
-      <a href="https://www.instagram.com/lds_transportation/" target="_blank" rel="noopener" class="gi"><div class="gi-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Photo 3</span></div></a>
-      <a href="https://www.instagram.com/lds_transportation/" target="_blank" rel="noopener" class="gi"><div class="gi-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Photo 4</span></div></a>
-      <a href="https://www.instagram.com/lds_transportation/" target="_blank" rel="noopener" class="gi"><div class="gi-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Photo 5</span></div></a>
-      <a href="https://www.instagram.com/lds_transportation/" target="_blank" rel="noopener" class="gi"><div class="gi-ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Photo 6</span></div></a>
+    <p class="ssub" style="max-width:640px;color:var(--silver);margin-top:1.25rem">Every load gets the same enclosed treatment — Harleys, exotics, classics. Live feed straight from our Facebook — follow for the latest pickups and deliveries.</p>
+    <div class="fbembed">
+      <iframe
+        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fp%2FLds-Transportation-100063908689293%2F&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+        style="border:none;overflow:hidden;width:100%;max-width:500px;height:700px;background:var(--c1);border-radius:8px"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        loading="lazy"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </div>
-    <div class="gcta"><a href="https://www.instagram.com/lds_transportation/" target="_blank" rel="noopener">Follow @lds_transportation <span>↗</span></a></div>
+    <div class="gcta" style="flex-wrap:wrap;gap:1rem">
+      <a href="https://www.facebook.com/p/Lds-Transportation-100063908689293/" target="_blank" rel="noopener">View on Facebook <span>↗</span></a>
+      <a href="https://www.instagram.com/lds_transportation/" target="_blank" rel="noopener">Follow on Instagram <span>↗</span></a>
+    </div>
   </div>
 </section>
 
