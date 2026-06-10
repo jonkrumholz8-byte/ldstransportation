@@ -19,7 +19,6 @@ Static HTML/CSS, no build step. The contact form posts to Netlify Forms (`data-n
 | --- | --- |
 | `index.html` | The site |
 | `logo.jpg` | Brand mark used in nav, favicon, and OpenGraph image |
-| `lds-transportation_5.html` | Backup copy of `index.html` |
 
 ## Deploy
 
